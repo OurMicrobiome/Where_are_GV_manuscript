@@ -1,0 +1,188 @@
+---
+title: "FisherTestTableV2"
+author: "Andrea Dame"
+date: "9/23/2020"
+output: html_document
+---
+
+##FisherExactTest
+
+```{r}
+AllVsTop <- matrix(c(21, 6, 2230, 75), nrow = 2,
+	              dimnames =
+	       list(c("All", "Top"),
+		    c("Soil Based", "Not Soil Based")))
+AllVsTop
+```
+
+```{r}
+fisher.test(AllVsTop)
+```
+
+```{r}
+AllDatavsSC2 <- matrix(c(21, 7, 2230, 194), nrow = 2,
+	              dimnames =
+	       list(c("All", "SC2 member"),
+ 		    c("Soil", "Not Soil")))
+AllDatavsSC2
+```
+
+```{r}
+fisher.test(AllDatavsSC2)
+```
+
+```{r}
+AllDatavsSC3 <- matrix(c(21, 9, 2230, 194), nrow = 2,
+	              dimnames =
+	       list(c("All", "SC3 member"),
+		    c("Soil", "Not Soil")))
+AllDatavsSC3
+```
+
+```{r}
+fisher.test(AllDatavsSC3)
+```
+
+```{r}
+AllDatavsSC6 <- matrix(c(21, 6, 2230, 145), nrow = 2,
+	              dimnames =
+	       list(c("All", "SC6 member"),
+		    c("Soil", "Not Soil")))
+AllDatavsSC6
+```
+
+```{r}
+fisher.test(AllDatavsSC6)
+```
+
+###Soilish
+```{r}
+SoilishAllDataVsSC2 <- matrix(c(38, 13, 2213, 190), nrow = 2,
+	              dimnames =
+	       list(c("AllData", "Sc2 Member"),
+		    c("soil", "Not soil")))
+SoilishAllDataVsSC2
+```
+
+```{r}
+fisher.test(SoilishAllDataVsSC2)
+```
+
+```{r}
+SoilishSC3 <- matrix(c(38, 7, 2213, 211), nrow = 2,
+	              dimnames =
+	       list(c("Alldata", "SC3 member"),
+		    c("soil", "not soil")))
+SoilishSC3
+```
+
+```{r}
+fisher.test(SoilishSC3)
+```
+
+```{r}
+SoilishSC6 <- matrix(c(38, 8, 2213, 143), nrow = 2,
+	              dimnames =
+	       list(c("AllData", "SC6 member"),
+		    c("soil", "not soil")))
+SoilishSC6
+```
+
+```{r}
+fisher.test(SoilishSC6)
+```
+
+```{r}
+SoilishSC1 <- matrix(c(38, 7, 2213, 42), nrow = 2,
+	              dimnames =
+	       list(c("All Data", "SC1 member"),
+		    c("Soil", "Not Soil")))
+		    
+SoilishSC1
+```
+
+```{r}
+ fisher.test(SoilishSC1)
+```
+
+```{r}
+SoilishSC4 <- matrix(c(38, 0, 2213, 31), nrow = 2,
+                  dimnames =
+                      list(c("All Data", "SC4 member"),
+                            c("Soil", "Not Soil")))
+SoilishSC4
+```
+
+```{r}
+ fisher.test(SoilishSC4)
+```
+
+```{r}
+
+SoilishSC5 <- matrix(c(38, 1, 2213, 8), nrow = 2,
+                      dimnames =
+                         list(c("All Data", "SC5 member"),
+                             c("Soil", "Not Soil")))
+SoilishSC5
+```
+
+```{r}
+fisher.test(SoilishSC5)
+```
+
+```{r}
+SoilishSC7 <- matrix(c(38, 1, 2213, 14), nrow = 2,
+                               dimnames =
+                                   list(c("All Data", "SC7 member"),
+                                        c("Soil", "Not Soil")))
+SoilishSC7
+```
+
+```{r}
+fisher.test(SoilishSC7)
+```
+
+```{r}
+SoilishSC8 <- matrix(c(38, 0, 2213, 219), nrow = 2,
+                                dimnames =
+                                    list(c("All Data", "SC8 member"),
+                                         c("Soil", "Not Soil")))
+SoilishSC8
+```
+
+```{r}
+fisher.test(SoilishSC8)
+```
+
+```{r}
+SoilishSC9 <- matrix(c(38, 0, 2213, 895), nrow = 2,
+                     dimnames =
+                       list(c("All Data", "SC9 member"),
+                           c("Soil", "Not Soil")))
+SoilishSC9
+```
+```{r}
+fisher.test(SoilishSC9)
+```
+```{r}
+SoilishSC10 <- matrix(c(38, 1, 2213, 380), nrow = 2,
+                    dimnames =
+                      list(c("All Data", "SC10 member"),
+                            c("Soil", "Not Soil")))
+SoilishSC10
+```
+
+```{r}
+fisher.test(SoilishSC10)
+```
+
+  
+#Table for Fisher Data
+```{r}
+FisherExactTest <- matrix(c(3.147e-05, 1.637e-04, 0.1112, 1, 0.1452, 6.821e-03, 0.2299, 0.04442, 4.39e-06, 0.03532), nrow = 10, ncol = TRUE) 
+rownames(FisherExactTest) <- c("SC1", "SC2", "SC3", "SC4", "SC5", "SC6", "SC7", "SC8", "SC9", "SC10")  
+colnames(FisherExactTest) <- c("p-value")
+FisherExactTest <- as.table(FisherExactTest)
+FisherExactTest
+```
+
