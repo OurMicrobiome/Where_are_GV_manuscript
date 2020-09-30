@@ -1,0 +1,10 @@
+---
+title: "index"
+author: "Andrea Dame"
+date: "9/30/2020"
+output: html_document
+---
+
+This is a rendering of html files for the Where are the GV manuscript for Dr. Jeff Blanchard's Lab at the University of Massachusetts, Amherst.
+
+Fisher Exact Test : (FisherTestTableV2.html)
